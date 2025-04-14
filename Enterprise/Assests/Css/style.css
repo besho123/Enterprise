@@ -1,0 +1,630 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+   
+}
+ 
+body{
+    background-color: #f8f9fa;
+}
+.navbar {
+    font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+    width: 100%;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Fixed state applied when scrolling past a threshold */
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 0.95); /* semi-transparent if you want a subtle effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-20px); /* Start 20px higher than the final position */
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* When the fixed class is added, transition to the final position */
+.fixed-navbar.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+  .nav-link {
+    color: #333; /* Dark gray for navigation links */
+  }
+  
+  .navbar-nav{
+    font-size: 1.20rem;
+    font-weight: bold;
+  }
+  .navbar-nav :hover{
+    color: #71A894;
+  }
+
+  .navbar-brand span{
+    font-size: 22px;
+    font-weight: bold;
+    color: #0e0f0f;
+  }
+
+  /* Custom CSS for enhanced responsiveness */
+  @media (max-width: 400px) {
+    .navbar-brand span {
+      display: none !important;
+    }
+    .navbar-brand {
+      margin-left: 0.5rem !important;
+    }
+    .navbar-brand img {
+      width: 55px;
+      height: 35px;
+    }
+  }
+ 
+  @media (max-width: 1300px) {
+    .navbar-nav {
+      padding: 1rem;
+      text-align: center;
+    }
+    .nav-item {
+      padding: 0.5rem 0;
+    }
+  }
+
+  /*------------------ Header ----------------------*/
+
+  .h1-header {
+    color: #303031;
+    font-family: "Abril Fatface", cursive;
+    font-size: 2.5rem; /* Base mobile size */
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  
+  .p-header {
+    font-size: 1.1rem; /* Base mobile size */
+    color: #66645e;
+    line-height: 1.5;
+  }
+  
+  .btn-header {
+    background-color: #71a894;
+    color: #fdfcfa;
+    font-weight: 600;
+    font-size: 1rem; /* Base mobile size */
+    border: none;
+    border-radius: 8px; /* Slightly smaller */
+    padding: 14px 18px; /* Smaller padding */
+    transition: background-color 0.3s ease, 
+    color 0.3s ease, 
+    transform 0.2s ease, 
+    box-shadow 0.2s ease;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-header:hover {
+    background-color: #5d8a7a;
+    color: #fdfcfa;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.btn-header:active {
+    transform: scale(0.98) translateY(0);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    background-color: #4a6b5e !important; /* Even darker shade for click */
+    color: #fdfcfa !important;
+}
+
+.btn-header:focus {
+    background-color: #5d8a7a;
+}
+
+  
+  /* Media Queries for larger screens */
+  @media (min-width: 768px) {
+    .h1-header {
+      font-size: 4rem;
+      line-height: 1.1;
+    }
+  
+    .p-header {
+      font-size: 1.6rem;
+    }
+  
+    .btn-header {
+      font-size: 1.2rem;
+      padding: 18px 20px;
+      border-radius: 10px;
+    }
+  }
+  
+  /* Optional: Adjust line break on mobile */
+  @media (max-width: 575px) {
+    .h1-header br {
+      display: none; /* Remove line break on smallest screens */
+    }
+  }
+
+ /*------------------ First Section ----------------------*/
+
+.TEXT h1{
+  
+  color: #303031;
+  font-family: "Abril Fatface" , cursive;
+  font-size: 2.75rem;
+  font-weight: bold;
+}
+
+.TEXT p.lead {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  text-align: center;
+  margin: 1.75rem auto 0;
+  max-width: 85ch; /* Optimal character count per line */
+  text-wrap: balance; /* Evenly distributes text (Chrome 117+) */
+}
+
+
+.card-section1 {
+  min-height: 300px;
+  height: 70vh;
+  max-height: 500px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card-section1 .icon {
+  height: 25%;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-section1 .icon img {
+  max-height: 100%;
+  width: auto;
+}
+
+.card-section1 h3 {
+  margin: 1.5rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-section1 p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .space{
+    margin-top: 1rem;
+  }
+  
+}
+
+
+ /*------------------ second Section ----------------------*/
+
+.h2-secion2{
+  color: #303031;
+  font-family: "Abril Fatface" , cursive;
+  font-size: 2.75rem;
+  font-weight: bold;
+}
+
+.card-body {
+  height: 66vh;
+  width: 23rem;
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 4px solid #0e0f0f;
+  background-color: #ffffff; 
+  transition: transform 0.3s ease;
+}
+.card-body:hover {
+  transform: translate(-5px , -5px);
+}
+.green-card {
+  position: relative; /* Establish positioning context */
+}
+
+.green-card::before {
+  content: "";
+  position: absolute; /* Position relative to .green-card */
+  top: 13px;
+  left: 17px;
+  width: 91%;
+  height: 100%;
+  background-color: #5d8a7a;
+  z-index: -1;
+  border-radius: 20px;
+}
+
+.green-card.custom-width {
+  width: 90%; /* Adjust percentage as needed */
+  max-width: 400px; /* Maximum width for larger screens */
+  margin-left: 100px; /* Push to right side of column */
+}
+
+.profile-img {
+  width: 70px;
+  height: 70px;
+}
+
+.members{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Existing CSS remains the same */
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .green-card.custom-width {
+    margin-left: 30px;
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .card-body {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .green-card.custom-width {
+    margin-left: 0;
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  .green-card::before {
+    width: 100%;
+    left: 8px;
+    top: 8px;
+  }
+
+  .profile-img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .card-body h4.fs-3 {
+    font-size: 1.5rem !important;
+  }
+
+  .members {
+    font-size: 1rem !important;
+  }
+
+  .h2-secion2 {
+    font-size: 1.75rem !important;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .card-body {
+    padding: 0.75rem;
+  }
+
+  .green-card::before {
+    left: 5px;
+    top: 5px;
+  }
+
+  .h2-secion2 {
+    font-size: 1.5rem !important;
+  }
+}
+
+ /*------------------ Third Section ----------------------*/
+
+ .section3 h2 {
+  color: #303031;
+  font-family: "Abril Fatface", cursive;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.section3-card {
+  padding: 2rem;
+  border-radius: 20px;
+  border: 4px solid #0e0f0f;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 500px; /* Adjust this value as needed */
+  transition: transform 0.3s ease;
+}
+.section3-card:hover {
+  transform: translateY( -5px );
+}
+
+.Go-to-vote {
+  border-radius: 20px;
+  font-weight: bold;
+  padding: 0.75rem;
+}
+
+@media (max-width: 992px) {
+  .section3 h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section3 h2 {
+    font-size: 1.75rem;
+  }
+  
+  .section3-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section3 h2 {
+    font-size: 1.5rem;
+  }
+  
+  .section3 p {
+    font-size: 1rem;
+  }
+  
+  .section3-card {
+    padding: 1rem;
+  }
+}
+
+
+/*------------------ Fourth Section ----------------------*/
+
+.section4 h2{
+
+  color: #303031;
+  font-family: "Abril Fatface", cursive;
+  font-weight: bold;
+  line-height: 1.2;
+
+}
+.section4 p{
+ font-size: large;
+}
+
+
+.shared-card-body{
+  height:10vh ;
+  border: 2px solid #0e0f0f;
+}
+
+.share-card {
+  border: 5px solid #0e0f0f;
+  border-radius: 20px;
+  padding: 1rem;
+  background-color: #ffffff;
+  max-width: 570px;
+  transition: transform 0.3s ease;
+}
+.share-card:hover {
+  transform: translateY( -5px );
+}
+
+
+.shared-btn {
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: #71a894;
+  color: #fdfcfa;
+  border: none;
+}
+
+.Alex-rose-card{
+  border: 4px solid #71a894 ;
+  border-radius: 20px;
+  background-color: #ffffff;
+  height: 50vh;
+
+}
+
+.Commit-Section {
+  gap: 3rem; /* Default gap for larger screens */
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+  .Commit-Section {
+    gap: 2rem;
+  }
+}
+
+/* Small devices (phones, 576px and down) */
+@media (max-width: 576px) {
+  .Commit-Section {
+    gap: 1rem;
+  }
+}
+
+/* Optional: For very small devices */
+@media (max-width: 400px) {
+  .Commit-Section {
+    gap: 0.5rem;
+    flex-wrap: wrap; /* Allows items to wrap if needed */
+    justify-content: center;
+  }
+}
+
+.three-applicants {
+  border: 4px solid #080808;
+  border-radius: 20px;
+  background-color: #F3F0EA;
+  min-height: 320px; /* More reliable than vh units */
+  padding: 1.5rem;
+  width: 100%; /* Better responsive behavior */
+  max-width: 400px; /* Maximum size */
+  margin: 0 auto; /* Center the card */
+}
+
+
+.ApplicantONE{
+  gap: 10px;
+}
+@media (max-width: 1070px) {
+  .responsive-row {
+    flex-direction: column;
+  }
+  .section4 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .section4 img {
+    margin: 0 auto 1.5rem !important;
+  }
+  .share-card {
+    max-width: 100% !important;
+  }
+  .three-applicants {
+    min-height: 50vh; /* Changed from fixed height to min-height */
+    padding: 1.8rem; /* Reduced padding */
+    min-width: 230px;
+
+  }
+}
+@media (max-width: 500px) {
+
+  @media (max-width: 500px) {
+    .three-applicants {
+      min-height: auto; /* Let content determine height */
+      padding: 1.2rem;
+      width: 90%; /* Better for small screens */
+      max-width: none;
+      border-radius: 15px;
+    }
+  }
+}
+
+/*------------------ Fifth Section ----------------------*/
+
+.P-section5{
+  max-width: 62.5rem;
+  margin: 0 auto;
+}
+
+.carousel-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  min-width: 370px;
+  max-width: 370px;
+  margin: 0 13px; 
+  padding: 25px;
+  flex-shrink: 0;
+  height: 40vh;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.token {
+  background-color: #7BAE9D;
+  color: white;
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 4px 12px;
+}
+
+.deadline {
+  font-weight: bold;
+  color: #333;
+  
+}
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dot {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #5CA999;
+}
+
+.Cards-title{
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #3d3939;
+}
+
+.P-Cards-title{
+  font-size: 1.05rem;
+  font-weight:500;
+}
+
+@media screen and (max-width: 768px) {
+ 
+  .carousel-card {
+  
+    height: 25vh;
+  }
+  
+}
+
+
+.Last-section{
+  margin-top: 8rem;
+  margin-bottom: 7rem;
+}
+
+.p-Last{
+  font-size: 1.1rem; /* Base mobile size */
+  color: #66645e;
+  line-height: 1.5;
+  
+}
